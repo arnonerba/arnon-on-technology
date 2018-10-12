@@ -2,18 +2,20 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php if (is_front_page()): ?><meta name="description" content="<?php bloginfo('description'); ?>">
 <?php endif ?>
 <?php wp_head();?>
+<!-- Meta tag for Bing Webmaster Tools -->
+<meta name="msvalidate.01" content="4D1A52C1785709ECB11FD36363E94E84" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-72396631-3"></script>
 <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-72396631-3', 'auto');
-ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-72396631-3');
 </script>
 </head>
 
@@ -25,13 +27,12 @@ ga('send', 'pageview');
 	</div>
 	<?php get_search_form(); ?>
 		<ul>
-			<li><a href="/">Blog Home</a></li>
-			<li><a href="https://www.arnonerba.com/">My Website</a></li>
-			<li><a href="https://www.arnonerba.com/about">About Me</a></li>
+			<li><a href="<?php bloginfo('url'); ?>">Home</a></li>
+			<li><a href="https://www.arnonerba.com/contact">Contact Me</a></li>
 			<li><a>Categories</a></li>
 			<li>
 				<ul>
-					<?php wp_list_categories(array( 'title_li' => '' ) ); ?>
+					<?php wp_list_categories(array('title_li' => '' )); ?>
 				</ul>
 			</li>
 			<li><a>Blog Archives</a></li>
@@ -49,13 +50,13 @@ ga('send', 'pageview');
 
 <header id="header">
 	<div class="headerpic">
-	<img alt="Profile pic" src="/wp-content/uploads/profilepic.png">
+	<img alt="Arnon Erba" src="/wp-content/uploads/profilepic.png">
 	</div>
 	<div class="headertitle">
-		<h1><a href="/"><?php bloginfo($show = 'name'); ?></a></h1>
+		<span><a href="<?php bloginfo('url'); ?>"><?php bloginfo($show = 'name'); ?></a></span>
 	</div>
 	<div class="headertext">
-		<h2>Artist. IT Tech. Web Designer. Musician. Creator.</h2>
+		<span>Life, the Universe, and Computing</span>
 	</div>
 </header>
 
