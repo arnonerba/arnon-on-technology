@@ -29,7 +29,7 @@ function load_styles() {
 	if (!is_admin()) {
 		wp_enqueue_style( 'material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', '', null );
 		wp_enqueue_style( 'roboto', 'https://fonts.googleapis.com/css?family=Roboto:400,700', '', null );
-		wp_enqueue_style( 'style', get_stylesheet_uri(), '', '2.0.7' );
+		wp_enqueue_style( 'style', get_stylesheet_uri(), '', '2.0.8' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'load_styles' );
