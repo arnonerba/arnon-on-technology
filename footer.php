@@ -6,9 +6,11 @@
 
 </div>
 
+<div id="scrim"></div>
+
 <?php wp_footer(); ?>
 
-<script>$(document).ready(function(){$("i.shownav").click(function(e){$("#navdrawer").toggleClass("navdraweropen"),$("#wrapper").toggleClass("siteshifted"),e.stopPropagation()}),$("#wrapper").click(function(e){$("#navdrawer").removeClass("navdraweropen"),$("#wrapper").removeClass("siteshifted")})}),$(window).scroll(function(){$(document).scrollTop()>0?$("#header").addClass("scrolled"):$("#header").removeClass("scrolled")});</script>
+<script>jQuery(document).ready(function(){jQuery("i.shownav").click(function(e){jQuery("#navdrawer").toggleClass("navdraweropen"),jQuery("#scrim").toggleClass("visible"),jQuery(document.body).toggleClass("noscroll"),e.stopPropagation()}),jQuery("#scrim").click(function(e){jQuery("#navdrawer").removeClass("navdraweropen"),jQuery("#scrim").removeClass("visible"),jQuery(document.body).removeClass("noscroll")})}),jQuery(window).scroll(function(){jQuery(document).scrollTop()>0?jQuery("#header").addClass("scrolled"):jQuery("#header").removeClass("scrolled")});</script>
 
 </body>
 

@@ -2,25 +2,34 @@
 Theme Name: Blog
 Author: Arnon Erba
 Author URI: https://www.arnonerba.com/
-Description: Blog theme to match Arnon Erba's website
-Version: 1.14.1
+Description: Custom theme for Arnon on Technology
+Version: 2.0.7
 */
 
 body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto', sans-serif;
-	color: #212121;
-	background-color: #F5F5F5;
+	font-weight: 400;
+	color: #FFF;
+	background-color: #757575;
+}
+body.noscroll {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
 }
 
 main {
 	display: block;
 }
 
-h1, h2, h3 {
-	display: inline;
+h1, h2, h3, h4, h5, h6 {
 	font-size: inherit;
+	font-weight: inherit;
 	margin: 0;
 	padding: 0;
 	font-weight: 400;
@@ -28,14 +37,20 @@ h1, h2, h3 {
 
 p {
 	margin: 0 0 16px 0;
-	font-weight: 400;
 }
 
 a {
 	text-decoration: none;
-	color: #2962FF;
+	color: #76FF03;
 }
 
+pre, code {
+	font-family: monospace;
+	border-radius: 4px;
+	color: #FFF;
+	background-color: rgba(158,158,158,0.2);
+	overflow: auto;
+}
 pre {
 	display: block;
 	white-space: pre;
@@ -43,108 +58,145 @@ pre {
 	padding: 8px;
 	overflow: auto;
 }
-
 code {
 	padding: 3px;
 	line-height: 24px;
 	box-sizing: border-box;
 }
 
-pre, code {
-	font-family: monospace;
-	border-radius: 2px;
-	color: #424242;
-	background-color: rgba(0,0,0,.05);
-	overflow: auto;
-}
-
 blockquote {
 	margin: 0 0 16px 0;
 	padding-left: 8px;
-	border-left: 4px solid #8BC34A;
+	border-left: 4px solid #76FF03;
+	font-style: italic;
 }
 
+#navmenubutton, #menubutton {
+	padding: 12px;
+	cursor: pointer;
+	color: #000;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
 #navmenubutton {
 	position: absolute;
 	top: 0;
 	left: 0;
-	padding: 12px;
-	z-index: 16;
-	cursor: pointer;
-	color: #FFF;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+	z-index: 9;
 }
-
 #menubutton {
 	position: fixed;
 	top: 0;
 	left: 0;
-	padding: 12px;
 	z-index: 6;
-	cursor: pointer;
-	color: #FFF;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
 }
 
-#navdrawer .logo {
-	position: relative;
-	height: 96px;
-	background-color: #1B5E20;
-}
 #navdrawer {
 	visibility: hidden;
 	position: fixed;
-	z-index: 15;
+	z-index: 8;
 	top: 0;
 	bottom: 0;
-	left: -250px;
-	width: 250px;
+	left: -256px;
+	width: 256px;
+	padding-top: 48px;
+	box-sizing: border-box;
 	overflow: auto;
-	background-color: #FFF;
-	font-size: 16px;
+	color: #000;
+	background-color: #76FF03;
+	font-size: 15px;
 	transition: all 200ms;
 	-webkit-overflow-scrolling: touch;
 }
-#navdrawer a {
-	text-decoration: none;
-}
 #navdrawer.navdraweropen {
 	visibility: visible;
-	-webkit-transform: translate(250px,0);
-	-ms-transform: translate(250px,0);
-	transform: translate(250px,0);
+	-webkit-transform: translate(256px,0);
+	-ms-transform: translate(256px,0);
+	transform: translate(256px,0);
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 #navdrawer ul {
-	margin: 10px 0 0 0;
+	margin: 0;
 	padding: 0;
 	list-style-type: none;
-	padding-bottom: 22px;
+}
+#navdrawer ul:last-child {
+	padding-bottom: 12px;
+}
+#navdrawer ul li {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	height: 38px;
+	margin: 6px;
+}
+#navdrawer ul li i.material-icons {
+	padding-left: 6px;
 }
 #navdrawer ul li a {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	display: block;
-	padding: 15px 10px 15px 22px;
+	background: 0 0;
+	border: none;
+	border-radius: 4px;
+	overflow: hidden;
+	outline: none;
+	cursor: pointer;
+	text-decoration: none;
+	line-height: 18px;
+	padding: 10px 10px 10px 56px;
 	font-weight: 700;
-	color: #212121;
+	color: #000;
+	transition: background-color 150ms ease;
 }
 #navdrawer ul li a:hover {
-	background-color: #E0E0E0;
+	background-color: rgba(158,158,158,0.2);
 }
-#navdrawer ul li ul {
-	margin: 0;
-	padding-bottom: 0;
+#navdrawer ul li a:active {
+	background-color: rgba(158,158,158,0.4);
 }
-#navdrawer ul li ul li a {
-	padding: 10px 24px 10px 46px;
+#navdrawer span {
+	display: block;
+	margin: 6px;
+	padding: 10px 6px;
 	font-weight: 400;
+	color: rgba(0,0,0,0.85);
 }
-#navdrawer ul li ul li a:hover {
-	color: #2962FF;
+#navdrawer hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid rgba(0,0,0,0.12);
+	margin: 8px 0;
+	padding: 0;
+}
+
+#scrim {
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 0;
+	transition: opacity 150ms linear;
+}
+#scrim.visible {
+	opacity: 1;
+	visibility: visible;
+	z-index: 7;
 }
 
 #wrapper {
@@ -153,10 +205,6 @@ blockquote {
 	left: 0;
 	min-height: 100%;
 	overflow: hidden;
-	transition: all 200ms;
-}
-#wrapper.siteshifted {
-	left: 250px !important;
 }
 
 .container {
@@ -177,10 +225,10 @@ blockquote {
 	-webkit-align-items: center;
 	align-items: center;
 	height: 48px;
-	color: #FFF;
-	background-color: #43A047;
+	color: #000;
+	background-color: #76FF03;
 	box-sizing: border-box;
-	padding: 0 48px 0 48px;
+	padding: 0 48px;
 	overflow: hidden;
 	box-shadow: none;
 	transition: box-shadow 150ms ease-in-out;
@@ -192,7 +240,7 @@ blockquote {
 .headerpic {
 	height: 36px;
 	width: 36px;
-	margin-right: 18px;
+	margin-right: 16px;
 	border-radius: 50%;
 	overflow: hidden;
 }
@@ -200,12 +248,9 @@ blockquote {
 	height: 100%;
 }
 
-.headertitle span {
-	font-size: 24px;
-}
 .headertitle span a {
-	text-decoration: none;
 	color: inherit;
+	font-size: 24px;
 }
 
 .headertext {
@@ -217,11 +262,10 @@ blockquote {
 .card {
 	text-align: left;
 	margin: 20px 10px 0 10px;
-	background: #FFF;
-	border-radius: 2px;
+	background-color: #212121;
+	border-radius: 4px;
 	overflow: hidden;
-	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
-	transition: all 0.2s ease-in-out;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.2),0 1px 5px 0 rgba(0,0,0,0.12);
 }
 
 .cardimage {
@@ -237,7 +281,6 @@ blockquote {
 	background-color: #454545;
 	overflow: hidden;
 }
-
 .cardimage img {
 	-webkit-flex: none;
 	flex: none;
@@ -246,26 +289,19 @@ blockquote {
 }
 
 .cardtitle {
-	margin: 24px 16px 12px 16px;
-}
-
-.cardtitle h1 {
+	margin: 18px 16px 12px 16px;
 	font-size: 24px;
-	line-height: 90%;
 }
-
 .cardtitle a {
 	color: inherit;
 }
-
 .cardtitle a:hover {
-	color: #2962FF;
+	color: #76FF03;
 }
 
 .cardsubtitle {
 	margin: 12px 16px 16px 16px;
 	font-size: 16px;
-	line-height: 90%;
 }
 
 .cardtext {
@@ -276,7 +312,6 @@ blockquote {
 	font-size: 16px;
 	line-height: 24px;
 }
-
 .cardtext::after {
 	content: '';
 	height: 48px;
@@ -284,38 +319,39 @@ blockquote {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+	background: linear-gradient(rgba(33,33,33,0), rgba(33,33,33,1));
 }
-
 .cardtext.full {
 	max-height: none;
 	overflow: visible;
 }
-
 .cardtext.full:after {
 	display: none;
 }
-
 .cardtext img {
 	max-width: 100%;
 	height: auto;
 }
-
+.cardtext img.aligncenter {
+	display: block;
+	margin: 0 auto;
+}
 .cardtext h3 {
 	display: block;
 	font-size: 20px;
+	font-weight: 700;
 	margin: 0 0 16px 0;
 }
-
 .cardtext h4 {
 	display: block;
 	font-size: 18px;
+	font-weight: 700;
 	margin: 0 0 16px 0;
 }
 
 .cardactions {
 	padding: 8px;
-	border-top: 1px solid rgba(0,0,0,.1);
+	border-top: 1px solid rgba(255,255,255,0.12);
 }
 
 .cardtags {
@@ -333,12 +369,12 @@ blockquote {
 	align-items: center;
 	-webkit-justify-content: center;
 	justify-content: center;
-	background: #455A64;
 	color: #FFF;
+	background-color: #212121;
 	height: 64px;
 	width: 100%;
 	box-sizing: border-box;
-	padding: 10px 70px 10px 70px;
+	padding: 10px 48px;
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -351,38 +387,36 @@ blockquote {
 
 .textfield {
 	border: none;
-	border-bottom: 2px solid #E0E0E0;
+	border-bottom: 1px solid rgba(0,0,0,0.12);
 	display: block;
 	font-size: 16px;
 	font-family: 'Roboto', sans-serif;
-	width: 100%;
+	width: 190px;
 	margin: 0;
 	padding: 4px 0;
 	background: 0 0;
 	text-align: left;
-	color: #424242;
+	color: #000;
 	outline: none;
 	border-radius: 0;
 	-webkit-appearance: none;
 }
-
 .textfield:focus {
-	border-bottom: 2px solid #1B5E20;
+	border-bottom: 2px solid #000;
+	margin-bottom: -1px;
 }
 
 .button, #page_navigation a {
 	position: relative;
 	background: 0 0;
 	border: none;
-	border-radius: 2px;
+	border-radius: 4px;
 	height: 36px;
 	margin: 0;
-	min-width: 64px;
 	padding: 0 16px;
 	display: inline-block;
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
-	font-weight: 500;
 	text-transform: uppercase;
 	letter-spacing: 0;
 	overflow: hidden;
@@ -392,16 +426,14 @@ blockquote {
 	text-align: center;
 	line-height: 36px;
 	vertical-align: middle;
-	color: #2962FF;
+	color: #76FF03;
 	transition: background-color 150ms ease;
 }
-
 .button:hover, #page_navigation a:hover {
-	background-color: rgba(158,158,158,.2);
+	background-color: rgba(158,158,158,0.2);
 }
-
 .button:active, #page_navigation a:active {
-	background: rgba(158,158,158,.4);
+	background-color: rgba(158,158,158,0.4);
 }
 
 .iconbutton {
@@ -440,7 +472,7 @@ blockquote {
 	justify-content: space-between;
 	-webkit-align-items: center;
 	align-items: center;
-	margin: 10px 15px;
+	margin: 16px;
 }
 
 #page_navigation {
@@ -450,37 +482,47 @@ blockquote {
 
 .error {
 	margin: 96px 0;
+	color: #212121;
 	text-align: center;
 }
-
 .error span {
 	font-size: 112px;
 }
+.error p {
+	font-weight: 700;
+}
 
 .highlight {
-	color: #FF1744;
+	color: #FF3D00;
+}
+
+::placeholder {
+	opacity: 1;
+	color: rgba(0,0,0,0.4);
+}
+::-webkit-input-placeholder {
+	opacity: 1;
+	color: rgba(0,0,0,0.4);
+}
+::-moz-placeholder {
+	opacity: 1;
+	color: rgba(0,0,0,0.4);
+}
+:-ms-input-placeholder {
+	opacity: 1;
+	color: rgba(0,0,0,0.4);
 }
 
 ::selection {
     background: #B3D4FC;
     text-shadow: none;
 }
-
 ::-moz-selection {
 	background: #B3D4FC;
 	text-shadow: none;
 }
 
-@media screen and (max-width: 1024px) {
-	#navdrawer.navdraweropen {
-		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	}
-	#wrapper.siteshifted {
-		left: 0 !important;
-	}
-}
-
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 768px) {
 	#header {
 		position: static;
 		-webkit-flex-direction: column;
@@ -498,32 +540,24 @@ blockquote {
 	.headertitle {
 		margin: 8px;
 		text-align: center;
-		line-height: normal;
 	}
 	.headertext {
 		margin: 0 0 8px 0;
 		text-align: center;
-		line-height: normal;
 	}
 	#menubutton {
 		position: absolute;
 	}
 	.container {
-		padding-top: 0;
+		padding: 0 0 80px 0;
+	}
+	.card {
+		margin: 12px 10px 0 10px;
 	}
 	#shruggie {
 		font-size: 72px;
 	}
 	.cardimage {
-		height: 120px;
-	}
-}
-
-@media screen and (max-width: 350px) {
-	.container {
-		padding: 0 0 80px 0;
-	}
-	.card {
-		margin: 25px 8px 0 8px;
+		height: 130px;
 	}
 }

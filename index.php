@@ -1,9 +1,30 @@
 <?php get_header(); ?>
 
+	<?php if ( is_category() ) { ?>
+		<div class="card">
+			<div class="cardtitle"><h1>Category: <?php single_cat_title(); ?></h1></div>
+			<div class="cardtext full"><?php echo category_description(); ?></div>
+		</div>
+	<?php } ?>
+
+	<?php if ( is_tag() ) { ?>
+		<div class="card">
+			<div class="cardtitle"><h1>Posts Tagged #<?php single_tag_title(); ?></h1></div>
+			<div class="cardtext full"><?php echo tag_description(); ?></div>
+		</div>
+	<?php } ?>
+
+    <?php if ( is_date() ) { ?>
+        <div class="card">
+            <div class="cardtitle"><h1>Archives:<?php single_month_title(' '); ?></h1></div>
+            <div class="cardtext full"></div>
+        </div>
+    <?php } ?>
+
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article class="card">
 			<div class="cardimage">
-				<?php if (has_post_thumbnail()) {
+				<?php if ( has_post_thumbnail() ) {
 					the_post_thumbnail();
 				} else { ?><img src="/wp-content/uploads/default_thumbnail.png" alt=""><?php } ?>
 			</div>
@@ -11,7 +32,7 @@
 				<h1><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h1>
 			</div>
 			<div class="cardsubtitle">
-				<h2><?php the_date(); ?> by <?php the_author_link(); ?></h2>
+				<h2>Posted on <?php echo get_the_date(); ?> by <?php the_author_link(); ?> in <?php $categories = get_the_category(); $cat = $categories[0]; echo '<a href="'.get_category_link($cat).'">'.$cat->name.'</a>'; ?></h2>
 			</div>
 			<div class="cardtext">
 				<?php the_content(); ?>
@@ -23,7 +44,7 @@
 	<?php endwhile; else : ?>
 	<div class="error">
 		<span id="shruggie">¯\_(ツ)_/¯</span>
-		<p>No posts found</p>
+		<p>No posts found.</p>
 		<a href="<?php bloginfo('url'); ?>" class="button">Home</a>
 	</div>
 	<?php endif; ?>
