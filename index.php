@@ -14,12 +14,12 @@
 		</div>
 	<?php } ?>
 
-    <?php if ( is_date() ) { ?>
-        <div class="card">
-            <div class="cardtitle"><h1>Archives:<?php single_month_title(' '); ?></h1></div>
-            <div class="cardtext full"></div>
-        </div>
-    <?php } ?>
+	<?php if ( is_date() ) { ?>
+		<div class="card">
+			<div class="cardtitle"><h1>Archives:<?php single_month_title(' '); ?></h1></div>
+			<div class="cardtext full"></div>
+		</div>
+	<?php } ?>
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article class="card">

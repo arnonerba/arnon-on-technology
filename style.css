@@ -357,8 +357,8 @@ blockquote {
 
 .cardtags {
 	margin: 8px;
-    font-size: 16px;
-    line-height: 24px;
+	font-size: 16px;
+	line-height: 24px;
 }
 
 #footer {
@@ -515,8 +515,8 @@ blockquote {
 }
 
 ::selection {
-    background: #B3D4FC;
-    text-shadow: none;
+	background: #B3D4FC;
+	text-shadow: none;
 }
 ::-moz-selection {
 	background: #B3D4FC;
