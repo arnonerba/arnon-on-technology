@@ -30,7 +30,7 @@ function load_styles() {
 	if (!is_admin()) {
 		wp_enqueue_style( 'material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', '', null );
 		wp_enqueue_style( 'roboto', 'https://fonts.googleapis.com/css?family=Roboto:400,700', '', null );
-		wp_enqueue_style( 'style', get_stylesheet_uri(), '', '2.0.8' );
+		wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/style.css', '', filemtime( get_stylesheet_directory() . '/style.css' ) );
 		wp_enqueue_style( 'tomorrow-night-eighties', get_template_directory_uri() . '/tomorrow-night-eighties.css', '', filemtime( get_template_directory() . '/tomorrow-night-eighties.css' ) );
 	}
 }
