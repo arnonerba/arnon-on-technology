@@ -19,8 +19,7 @@ function load_scripts() {
 	if (!is_admin()) {
 		wp_deregister_script( 'wp-embed' );
 		wp_deregister_script( 'jquery' );
-		wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), '' , null, true );
-		wp_enqueue_script( 'jquery' );
+		wp_enqueue_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), '' , false, true );
 		wp_enqueue_script( 'highlight.js', get_template_directory_uri() . '/highlight.pack.js', '', filemtime( get_template_directory() . '/highlight.pack.js' ), true );
 	}
 }
