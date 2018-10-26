@@ -344,10 +344,11 @@ blockquote {
 	margin: 0 0 16px 0;
 }
 .cardtext h4 {
-	display: block;
+	display: inline-block;
 	font-size: 18px;
 	font-style: italic;
 	margin: 0 0 16px 0;
+	border-bottom: 1px solid;
 }
 
 .cardactions {
