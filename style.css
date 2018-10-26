@@ -49,7 +49,7 @@ pre, code {
 	font-family: monospace;
 	border-radius: 4px;
 	color: #FFF;
-	background-color: rgba(158,158,158,0.2);
+	background-color: rgba(0,0,0,0.7) !important;
 	overflow: auto;
 }
 pre {
