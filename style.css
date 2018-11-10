@@ -56,7 +56,7 @@ pre {
 	display: block;
 	white-space: pre;
 	margin: 16px 0;
-	padding: 8px;
+	padding: 8px !important;
 	overflow: auto;
 }
 code {
