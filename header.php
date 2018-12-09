@@ -33,7 +33,7 @@
 	<hr>
 	<span>Categories</span>
 	<ul>
-		<?php foreach( get_categories() as $cat ) { echo '<li><i class="material-icons">label</i><a href="'.get_category_link($cat).'">'.$cat->name.'</a></li>'; } ?>
+		<?php foreach( get_categories() as $cat ) { echo '<li><i class="material-icons">label</i><a href="'.get_category_link( $cat ).'">'.$cat->name.'</a></li>'; } ?>
 	</ul>
 	<hr>
 	<span>Archives</span>
