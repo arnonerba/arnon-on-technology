@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta charset="<?php bloginfo('charset'); ?>">
+<meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php if ( is_front_page() ) { ?>
-<meta name="description" content="<?php bloginfo('description'); ?>">
+<meta name="description" content="<?php bloginfo( 'description' ); ?>">
 <?php } else if ( is_category() ) { ?>
 <meta name="description" content="<?php echo esc_html( sanitize_text_field( strip_tags( category_description() ) ) ); ?>">
 <?php } else if ( is_tag() ) { ?>
