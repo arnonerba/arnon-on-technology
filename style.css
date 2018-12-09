@@ -482,6 +482,14 @@ blockquote {
 	text-align: center;
 }
 
+ol.commentlist {
+	padding: 0;
+	list-style-type: none;
+}
+li.comment {
+	margin: 0 0 16px 0;
+}
+
 .error {
 	margin: 96px 0;
 	color: #212121;
