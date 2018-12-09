@@ -32,7 +32,7 @@
 				<h1><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h1>
 			</div>
 			<div class="cardsubtitle">
-				<h2>Posted on <?php echo get_the_date(); ?> by <?php the_author_link(); ?> in <?php $categories = get_the_category(); $cat = $categories[0]; echo '<a href="'.get_category_link($cat).'">'.$cat->name.'</a>'; ?></h2>
+				<h2>Posted on <?php echo get_the_date(); ?> by <?php the_author_link(); ?> in <?php $categories = get_the_category(); $cat = $categories[0]; echo '<a href="'.get_category_link( $cat ).'">'.$cat->name.'</a>'; ?></h2>
 			</div>
 			<div class="cardtext">
 				<?php the_content(); ?>
@@ -45,12 +45,12 @@
 	<div class="error">
 		<span id="shruggie">¯\_(ツ)_/¯</span>
 		<p>No posts found.</p>
-		<a href="<?php bloginfo('url'); ?>" class="button">Home</a>
+		<a href="<?php bloginfo( 'url' ); ?>" class="button">Home</a>
 	</div>
 	<?php endif; ?>
 
 <div id="page_navigation">
-	<?php posts_nav_link(' ', 'Previous Page', 'Next Page'); ?>
+	<?php posts_nav_link( ' ', 'Previous Page', 'Next Page' ); ?>
 </div>
 
 <?php get_footer(); ?>
