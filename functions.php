@@ -84,3 +84,6 @@ remove_action( 'wp_head', 'wp_generator' );
 
 // Remove header link to xmlrpc.php
 remove_action( 'wp_head', 'rsd_link' );
+
+// Escape special characters in comments
+add_filter( 'pre_comment_content', 'esc_html' );
