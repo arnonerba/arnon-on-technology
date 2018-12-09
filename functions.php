@@ -78,3 +78,9 @@ function disable_author_archives() {
 	}
 }
 add_action( 'template_redirect', 'disable_author_archives' );
+
+// Remove WordPress version meta tag
+remove_action( 'wp_head', 'wp_generator' );
+
+// Remove header link to xmlrpc.php
+remove_action( 'wp_head', 'rsd_link' );
