@@ -68,3 +68,13 @@ function disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
 	}
 	return $urls;
 }
+
+function disable_author_archives() {
+	if ( is_author() ) {
+		global $wp_query;
+		$wp_query->set_404();
+		status_header( 404 );
+		nocache_headers();
+	}
+}
+add_action( 'template_redirect', 'disable_author_archives' );
