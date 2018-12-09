@@ -302,6 +302,7 @@ blockquote {
 .cardsubtitle {
 	margin: 12px 16px 16px 16px;
 	font-size: 16px;
+	font-weight: 700;
 }
 
 .cardtext {
