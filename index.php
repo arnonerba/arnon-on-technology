@@ -3,21 +3,21 @@
 	<?php if ( is_category() ) { ?>
 		<div class="card">
 			<div class="cardtitle"><h1>Category: <?php single_cat_title(); ?></h1></div>
-			<div class="cardtext full"><?php echo category_description(); ?></div>
+			<div class="cardtext full"><?php the_archive_description(); ?></div>
 		</div>
 	<?php } ?>
 
 	<?php if ( is_tag() ) { ?>
 		<div class="card">
 			<div class="cardtitle"><h1>Posts Tagged #<?php single_tag_title(); ?></h1></div>
-			<div class="cardtext full"><?php echo tag_description(); ?></div>
+			<div class="cardtext full"><?php the_archive_description(); ?></div>
 		</div>
 	<?php } ?>
 
 	<?php if ( is_date() ) { ?>
 		<div class="card">
-			<div class="cardtitle"><h1>Archives:<?php single_month_title(' '); ?></h1></div>
-			<div class="cardtext full"></div>
+			<div class="cardtitle"><h1><?php the_archive_title(); ?></h1></div>
+			<div class="cardtext full"><?php the_archive_description(); ?></div>
 		</div>
 	<?php } ?>
 
