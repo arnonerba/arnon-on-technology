@@ -488,6 +488,9 @@ ol.commentlist {
 }
 li.comment {
 	margin: 0 0 16px 0;
+	padding-left: 8px;
+	border-left: 4px solid #76FF03;
+	font-size: 14px;
 }
 
 .error {
