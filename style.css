@@ -498,14 +498,15 @@ blockquote p, .comment p {
 }
 
 ol.commentlist {
+	margin: 16px 0;
 	padding: 0;
 	list-style-type: none;
 }
-li.comment {
-	margin: 0 0 16px 0;
-	padding-left: 8px;
-	border-left: 4px solid #76FF03;
-	font-size: 14px;
+ul.children {
+	margin: 16px 8px;
+	padding: 0;
+	list-style-type: none;
+}
 }
 
 .error {
