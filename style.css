@@ -525,6 +525,8 @@ ul.children {
 	padding: 0;
 	list-style-type: none;
 }
+.comment-form textarea, .comment-form input[type='text'] {
+	margin: 4px 0;
 }
 
 .error {
