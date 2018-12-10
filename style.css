@@ -64,11 +64,16 @@ code {
 	box-sizing: border-box;
 }
 
-blockquote {
+blockquote, .comment {
 	margin: 0 0 16px 0;
-	padding-left: 8px;
+	padding: 8px;
 	border-left: 4px solid #76FF03;
+	border-radius: 4px;
 	font-style: italic;
+	background-color: rgba(0,0,0,0.7);
+}
+blockquote p, .comment p {
+	margin: 0;
 }
 
 #navmenubutton, #menubutton {
