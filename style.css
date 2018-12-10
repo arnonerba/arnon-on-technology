@@ -45,11 +45,13 @@ a {
 }
 
 pre, code, textarea {
+	box-sizing: border-box;
 	font-family: monospace;
 	border-radius: 4px;
 	color: #FFF;
 	background-color: rgba(0,0,0,0.7) !important;
 	overflow: auto;
+	border: none;
 }
 pre {
 	display: block;
@@ -61,7 +63,6 @@ pre {
 code {
 	padding: 3px;
 	line-height: 24px;
-	box-sizing: border-box;
 }
 textarea {
 	display: block;
@@ -69,8 +70,6 @@ textarea {
 	margin: 16px 0;
 	padding: 8px;
 	width: 100%;
-	box-sizing: border-box;
-	border: none;
 	resize: none;
 }
 
