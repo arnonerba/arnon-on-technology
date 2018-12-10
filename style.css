@@ -404,7 +404,7 @@ blockquote p, .comment p {
 	font-size: 14px;
 }
 
-.textfield {
+input[type='search'] {
 	border: none;
 	border-bottom: 1px solid rgba(0,0,0,0.12);
 	display: block;
@@ -420,12 +420,11 @@ blockquote p, .comment p {
 	border-radius: 0;
 	-webkit-appearance: none;
 }
-.textfield:focus {
+input[type='search']:focus {
 	border-bottom: 2px solid #000;
 	margin-bottom: -1px;
 }
 
-.button, #page_navigation a, input.submit {
 input[type='text'] {
 	display: block;
 	white-space: pre-wrap;
@@ -442,6 +441,7 @@ input[type='text'] {
 	-webkit-appearance: none;
 }
 
+.button, #page_navigation a, input[type='submit'] {
 	position: relative;
 	background: 0 0;
 	border: none;
@@ -464,10 +464,10 @@ input[type='text'] {
 	color: #76FF03;
 	transition: background-color 150ms ease;
 }
-.button:hover, #page_navigation a:hover, input.submit:hover {
+.button:hover, #page_navigation a:hover, input[type='submit']:hover {
 	background-color: rgba(158,158,158,0.2);
 }
-.button:active, #page_navigation a:active, input.submit:active {
+.button:active, #page_navigation a:active, input[type='submit']:active {
 	background-color: rgba(158,158,158,0.4);
 }
 
