@@ -21,7 +21,7 @@
 			</div>
 		</article>
 		<div class="card">
-			<div class="cardtext full">
+			<div class="cardtext full smallfont">
 				<?php comments_template(); ?>
 			</div>
 		</div>

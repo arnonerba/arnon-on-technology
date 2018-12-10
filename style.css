@@ -344,6 +344,9 @@ blockquote p, .comment p {
 .cardtext.full:after {
 	display: none;
 }
+.cardtext.smallfont {
+	font-size: 14px;
+}
 .cardtext img {
 	max-width: 100%;
 	height: auto;
