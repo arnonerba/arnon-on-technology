@@ -21,6 +21,13 @@
 		</div>
 	<?php } ?>
 
+	<?php if ( is_search() ) { ?>
+		<div class="card">
+			<div class="cardtitle"><h1>Search Results for "<?php the_search_query(); ?>"</h1></div>
+			<div class="cardtext full"><?php the_archive_description(); ?></div>
+		</div>
+	<?php } ?>
+
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article class="card">
 			<div class="cardimage">
