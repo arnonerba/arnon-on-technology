@@ -84,6 +84,9 @@ blockquote, .comment {
 blockquote p, .comment p {
 	margin: 0;
 }
+.comment cite {
+	font-weight: 700;
+}
 
 #navmenubutton, #menubutton {
 	padding: 12px;
