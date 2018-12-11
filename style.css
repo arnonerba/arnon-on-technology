@@ -47,6 +47,7 @@ a {
 pre, code, textarea {
 	box-sizing: border-box;
 	font-family: monospace;
+	font-size: inherit;
 	border-radius: 4px;
 	color: #FFF;
 	background-color: rgba(0,0,0,0.7) !important;
@@ -79,6 +80,7 @@ blockquote, .comment {
 	border-left: 4px solid #76FF03;
 	border-radius: 4px;
 	font-style: italic;
+	font-size: inherit;
 	background-color: rgba(0,0,0,0.7);
 }
 blockquote p, .comment p {
@@ -411,8 +413,8 @@ input[type='search'] {
 	border: none;
 	border-bottom: 1px solid rgba(0,0,0,0.12);
 	display: block;
-	font-size: 16px;
 	font-family: 'Roboto', sans-serif;
+	font-size: inherit;
 	width: 190px;
 	margin: 0;
 	padding: 4px 0;
@@ -438,6 +440,7 @@ input[type='text'] {
 	border: none;
 	resize: none;
 	font-family: monospace;
+	font-size: inherit;
 	border-radius: 4px;
 	color: #FFF;
 	background-color: rgba(0,0,0,0.7) !important;
