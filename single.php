@@ -28,10 +28,10 @@
 	<?php endwhile; ?>
 	<?php endif; ?>
 
-<div id="page_navigation">
+<nav id="page_navigation">
 	<?php next_post_link( '%link', 'Newer Post', FALSE ); ?>
 	<a href="<?php bloginfo( 'url' ); ?>">Home</a>
 	<?php previous_post_link( '%link', 'Older Post', FALSE ); ?>
-</div>
+</nav>
 
 <?php get_footer(); ?>
