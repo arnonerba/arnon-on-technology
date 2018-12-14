@@ -544,8 +544,9 @@ ul.children {
 .error span {
 	font-size: 112px;
 }
-.error p {
+.error h1 {
 	font-weight: 700;
+	margin: 0 0 16px 0;
 }
 
 .highlight {

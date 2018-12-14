@@ -2,7 +2,7 @@
 
 <div class="error">
 	<span id="shruggie">¯\_(ツ)_/¯</span>
-	<p>Uh oh, we can't find that page.</p>
+	<h1>Uh oh, we can't find that page.</h1>
 	<a href="<?php bloginfo( 'url' ); ?>" class="button">Home</a>
 </div>
 
