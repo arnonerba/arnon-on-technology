@@ -49,11 +49,11 @@
 			</div>
 		</article>
 	<?php endwhile; else : ?>
-	<div class="error">
-		<span id="shruggie">¯\_(ツ)_/¯</span>
-		<p>No posts found.</p>
-		<a href="<?php bloginfo( 'url' ); ?>" class="button">Home</a>
-	</div>
+		<div class="error">
+			<span id="shruggie">¯\_(ツ)_/¯</span>
+			<p>No posts found.</p>
+			<a href="<?php bloginfo( 'url' ); ?>" class="button">Home</a>
+		</div>
 	<?php endif; ?>
 
 <nav id="page_navigation">
