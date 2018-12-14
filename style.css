@@ -24,7 +24,7 @@ body.noscroll {
 	overflow: hidden;
 }
 
-main {
+main, nav, article, section {
 	display: block;
 }
 
