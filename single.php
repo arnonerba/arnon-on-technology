@@ -20,11 +20,11 @@
 				<div class="cardtags">Tagged: <?php foreach( get_the_tags() as $tag ) { echo '<a href="'.get_tag_link( $tag ).'">'.'#'.str_replace( " ", "-", strtolower( $tag->name ) ).'</a>'. ' '; } ?></div>
 			</div>
 		</article>
-		<div class="card">
+		<section class="card">
 			<div class="cardtext full smallfont">
 				<?php comments_template(); ?>
 			</div>
-		</div>
+		</section>
 	<?php endwhile; ?>
 	<?php endif; ?>
 
