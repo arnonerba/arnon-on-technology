@@ -51,7 +51,7 @@
 	<img alt="Arnon Erba" src="/wp-content/uploads/arnon.png">
 	</div>
 	<div class="headertitle">
-		<span><a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( $show = 'name' ); ?></a></span>
+		<span><a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a></span>
 	</div>
 	<div class="headertext">
 		<span>Life, the Universe, and Computing</span>
