@@ -56,8 +56,8 @@
 		</div>
 	<?php endif; ?>
 
-<nav id="page_navigation">
-	<?php posts_nav_link( ' ', 'Previous Page', 'Next Page' ); ?>
-</nav>
+	<nav id="page_navigation">
+		<?php posts_nav_link( ' ', 'Previous Page', 'Next Page' ); ?>
+	</nav>
 
 <?php get_footer(); ?>
