@@ -1,6 +1,6 @@
 		</main>
 		<footer id="footer">
-			<div class="footertext">&copy; Arnon Erba <?php echo date('Y'); ?></div>
+			<div class="footertext">&copy; <?php bloginfo( 'name' ); ?> <?php echo date('Y'); ?></div>
 		</footer>
 	</div>
 	<div id="scrim"></div>
