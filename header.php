@@ -13,7 +13,7 @@
 <?php } else if ( is_single() ) { if ( has_excerpt() ) { ?>
 <meta name="description" content="<?php echo esc_html( sanitize_text_field( strip_tags( get_the_excerpt() ) ) ); ?>">
 <?php } } ?>
-<?php wp_head();?>
+<?php wp_head(); ?>
 <!-- Google Search Console -->
 <meta name="google-site-verification" content="0opVnIXqhd-1DCNoneerJcu0x4-ZhgDNVmVH9dPAjhw" />
 <!-- Bing Webmaster Tools -->
