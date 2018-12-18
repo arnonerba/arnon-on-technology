@@ -1,6 +1,7 @@
 <?php ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
+
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,41 +22,36 @@
 </head>
 
 <body>
-
-<nav id="navdrawer">
-	<i id="navmenubutton" class="shownav material-icons">close</i>
-	<?php get_search_form(); ?>
-	<hr>
-	<ul>
-		<li><i class="material-icons">home</i><a href="<?php bloginfo( 'url' ); ?>">Home</a></li>
-		<li><i class="material-icons">chat</i><a href="https://www.arnonerba.com/contact">Contact Me</a></li>
-	</ul>
-	<hr>
-	<span>Categories</span>
-	<ul>
-		<?php foreach( get_categories() as $cat ) { echo '<li><i class="material-icons">label</i><a href="'.get_category_link( $cat ).'">'.$cat->name.'</a></li>'; } ?>
-	</ul>
-	<hr>
-	<span>Archives</span>
-	<ul>
-		<?php wp_get_archives( array( 'format' => 'custom', 'before' => '<li><i class="material-icons">folder</i>', 'after' => '</li>' )); ?>
-	</ul>
-</nav>
-
-<div id="wrapper">
-
-<i id="menubutton" class="shownav material-icons">menu</i>
-
-<header id="header">
-	<div class="headerpic">
-	<img alt="Arnon Erba" src="/wp-content/uploads/arnon.png">
-	</div>
-	<div class="headertitle">
-		<span><a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a></span>
-	</div>
-	<div class="headertext">
-		<span>Life, the Universe, and Computing</span>
-	</div>
-</header>
-
-<main class="container">
+	<nav id="navdrawer">
+		<i id="navmenubutton" class="shownav material-icons">close</i>
+		<?php get_search_form(); ?>
+		<hr>
+		<ul>
+			<li><i class="material-icons">home</i><a href="<?php bloginfo( 'url' ); ?>">Home</a></li>
+			<li><i class="material-icons">chat</i><a href="https://www.arnonerba.com/contact">Contact Me</a></li>
+		</ul>
+		<hr>
+		<span>Categories</span>
+		<ul>
+			<?php foreach( get_categories() as $cat ) { echo '<li><i class="material-icons">label</i><a href="'.get_category_link( $cat ).'">'.$cat->name.'</a></li>'; } ?>
+		</ul>
+		<hr>
+		<span>Archives</span>
+		<ul>
+			<?php wp_get_archives( array( 'format' => 'custom', 'before' => '<li><i class="material-icons">folder</i>', 'after' => '</li>' )); ?>
+		</ul>
+	</nav>
+	<div id="wrapper">
+		<i id="menubutton" class="shownav material-icons">menu</i>
+		<header id="header">
+			<div class="headerpic">
+			<img alt="Arnon Erba" src="/wp-content/uploads/arnon.png">
+			</div>
+			<div class="headertitle">
+				<span><a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a></span>
+			</div>
+			<div class="headertext">
+				<span>Life, the Universe, and Computing</span>
+			</div>
+		</header>
+		<main class="container">
