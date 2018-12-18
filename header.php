@@ -1,7 +1,6 @@
 <?php ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +19,6 @@
 <!-- Bing Webmaster Tools -->
 <meta name="msvalidate.01" content="4D1A52C1785709ECB11FD36363E94E84" />
 </head>
-
 <body>
 	<nav id="navdrawer">
 		<i id="navmenubutton" class="shownav material-icons">close</i>
