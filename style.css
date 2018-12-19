@@ -477,8 +477,7 @@ input[type='text'] {
 .button:active, input[type='submit']:active {
 	background-color: rgba(158,158,158,0.4);
 }
-
-.iconbutton {
+.button.iconbutton {
 	border: none;
 	border-radius: 50%;
 	font-size: 24px;
