@@ -326,7 +326,7 @@ blockquote p, .comment p {
 
 .cardtext {
 	position: relative;
-	max-height: 275px;
+	max-height: 255px;
 	overflow: hidden;
 	margin: 16px;
 	font-size: 16px;
@@ -334,7 +334,7 @@ blockquote p, .comment p {
 }
 .cardtext::after {
 	content: '';
-	height: 48px;
+	height: 24px;
 	position: absolute;
 	right: 0;
 	bottom: 0;
