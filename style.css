@@ -450,11 +450,12 @@ input[type='text'] {
 .button, #page_navigation a, input[type='submit'] {
 	position: relative;
 	background: 0 0;
-	border: none;
+	border: 2px solid #76FF03;
 	border-radius: 4px;
 	height: 36px;
 	margin: 0;
-	padding: 0 16px;
+	padding: 0 14px;
+	box-sizing: border-box;
 	display: inline-block;
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
@@ -465,7 +466,7 @@ input[type='text'] {
 	cursor: pointer;
 	text-decoration: none;
 	text-align: center;
-	line-height: 36px;
+	line-height: 32px;
 	vertical-align: middle;
 	color: #76FF03;
 	transition: background-color 150ms ease;
@@ -479,6 +480,7 @@ input[type='text'] {
 }
 
 .iconbutton {
+	border: none;
 	border-radius: 50%;
 	font-size: 24px;
 	height: 32px;
