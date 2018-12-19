@@ -543,7 +543,11 @@ ul.children {
 	text-align: center;
 }
 .error span {
+	display: block;
+	margin: 0 0 24px 0;
 	font-size: 112px;
+	line-height: 100%;
+	white-space: nowrap;
 }
 .error p {
 	font-weight: 700;
@@ -611,7 +615,7 @@ ul.children {
 	.card {
 		margin: 12px 10px 0 10px;
 	}
-	#shruggie {
+	.error span {
 		font-size: 72px;
 	}
 	.cardimage {
