@@ -52,7 +52,7 @@
 		<div class="error">
 			<span id="shruggie">¯\_(ツ)_/¯</span>
 			<p>No posts found.</p>
-			<a href="<?php bloginfo( 'url' ); ?>" class="button">Home</a>
+			<a href="<?php bloginfo( 'url' ); ?>" class="button raised">Home</a>
 		</div>
 	<?php endif; ?>
 
