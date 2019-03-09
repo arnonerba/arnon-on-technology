@@ -85,7 +85,10 @@ function arnon_on_technology_adjust_theme_customization_sections( $wp_customize 
 }
 add_action( 'customize_register', 'arnon_on_technology_adjust_theme_customization_sections' );
 
-function disable_author_archives() {
+function arnon_on_technology_disable_author_archives() {
+	/*
+	Return a 404 when an author archive is requested.
+	*/
 	if ( is_author() ) {
 		global $wp_query;
 		$wp_query->set_404();
@@ -93,4 +96,4 @@ function disable_author_archives() {
 		nocache_headers();
 	}
 }
-add_action( 'template_redirect', 'disable_author_archives' );
+add_action( 'template_redirect', 'arnon_on_technology_disable_author_archives' );
