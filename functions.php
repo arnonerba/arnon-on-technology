@@ -5,7 +5,7 @@ add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'title-tag' );
 
 function the_modified_title( $title ) {
-	$title['tagline'] = null;
+	unset( $title['tagline'] );
 	return $title;
 }
 add_filter( 'document_title_parts', 'the_modified_title' );
