@@ -79,7 +79,7 @@ function arnon_on_technology_remove_emojis_dns_prefetch( $urls, $relation_type )
 
 function arnon_on_technology_adjust_theme_customization_sections( $wp_customize ) {
 	/*
-	Disable the Additional CSS panel in the Appearance Editor.
+	Disable the Additional CSS section in the Theme Customizer.
 	*/
 	$wp_customize->remove_section( 'custom_css' );
 }
