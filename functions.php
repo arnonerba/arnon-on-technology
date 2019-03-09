@@ -80,6 +80,14 @@ function disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
 	return $urls;
 }
 
+function arnon_on_technology_adjust_theme_customization_sections( $wp_customize ) {
+	/*
+	Disable the Additional CSS panel in the Appearance Editor.
+	*/
+	$wp_customize->remove_section( 'custom_css' );
+}
+add_action( 'customize_register', 'arnon_on_technology_adjust_theme_customization_sections' );
+
 function disable_author_archives() {
 	if ( is_author() ) {
 		global $wp_query;
