@@ -1,14 +1,31 @@
 <?php
 
-add_theme_support( 'post-thumbnails' );
-add_theme_support( 'automatic-feed-links' );
-add_theme_support( 'title-tag' );
-
-function the_modified_title( $title ) {
-	unset( $title['tagline'] );
-	return $title;
+function arnon_on_technology_setup() {
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'title-tag' );
+	/*
+	Remove WordPress version number meta tag.
+	*/
+	remove_action( 'wp_head', 'wp_generator' );
+	/*
+	Remove link to xmlrpc.php in header.
+	*/
+	remove_action( 'wp_head', 'rsd_link' );
+	/*
+	Escape HTML characters in comments.
+	*/
+	add_filter( 'pre_comment_content', 'esc_html' );
+	/*
+	Remove tagline from <title> tag.
+	*/
+	function arnon_on_technology_modify_title( $title ) {
+		unset( $title['tagline'] );
+		return $title;
+	}
+	add_filter( 'document_title_parts', 'arnon_on_technology_modify_title' );
 }
-add_filter( 'document_title_parts', 'the_modified_title' );
+add_action( 'after_setup_theme', 'arnon_on_technology_setup' );
 
 function load_scripts() {
 	if (!is_admin()) {
@@ -74,12 +91,3 @@ function disable_author_archives() {
 	}
 }
 add_action( 'template_redirect', 'disable_author_archives' );
-
-// Remove WordPress version meta tag
-remove_action( 'wp_head', 'wp_generator' );
-
-// Remove header link to xmlrpc.php
-remove_action( 'wp_head', 'rsd_link' );
-
-// Escape special characters in comments
-add_filter( 'pre_comment_content', 'esc_html' );
