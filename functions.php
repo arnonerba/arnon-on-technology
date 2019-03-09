@@ -27,27 +27,25 @@ function arnon_on_technology_setup() {
 }
 add_action( 'after_setup_theme', 'arnon_on_technology_setup' );
 
-function load_scripts() {
-	if (!is_admin()) {
-		wp_deregister_script( 'wp-embed' );
-		wp_deregister_script( 'jquery' );
-		wp_enqueue_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), '' , false, true );
-		wp_enqueue_script( 'scripts', get_template_directory_uri() . '/scripts.min.js', array( 'jquery' ), filemtime( get_template_directory() . '/scripts.min.js' ), true );
-		wp_enqueue_script( 'highlight.js', get_template_directory_uri() . '/highlight.pack.js', '', filemtime( get_template_directory() . '/highlight.pack.js' ), true );
-	}
+function arnon_on_technology_enqueue_scripts_styles() {
+	/*
+	Enqueue JavaScript files.
+	*/
+	wp_deregister_script( 'wp-embed' );
+	wp_deregister_script( 'jquery' );
+	wp_enqueue_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), '' , false, true );
+	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/scripts.min.js', array( 'jquery' ), filemtime( get_template_directory() . '/scripts.min.js' ), true );
+	wp_enqueue_script( 'highlight.js', get_template_directory_uri() . '/highlight.pack.js', '', filemtime( get_template_directory() . '/highlight.pack.js' ), true );
+	/*
+	Enqueue CSS stylesheets.
+	*/
+	wp_dequeue_style( 'wp-block-library' );
+	wp_enqueue_style( 'material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', '', null );
+	wp_enqueue_style( 'roboto', 'https://fonts.googleapis.com/css?family=Roboto:400,700', '', null );
+	wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/style.css', '', filemtime( get_stylesheet_directory() . '/style.css' ) );
+	wp_enqueue_style( 'xt256', get_template_directory_uri() . '/xt256.css', '', filemtime( get_template_directory() . '/xt256.css' ) );
 }
-add_action( 'wp_enqueue_scripts', 'load_scripts' );
-
-function load_styles() {
-	if (!is_admin()) {
-		wp_dequeue_style( 'wp-block-library' );
-		wp_enqueue_style( 'material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', '', null );
-		wp_enqueue_style( 'roboto', 'https://fonts.googleapis.com/css?family=Roboto:400,700', '', null );
-		wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/style.css', '', filemtime( get_stylesheet_directory() . '/style.css' ) );
-		wp_enqueue_style( 'xt256', get_template_directory_uri() . '/xt256.css', '', filemtime( get_template_directory() . '/xt256.css' ) );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'load_styles' );
+add_action( 'wp_enqueue_scripts', 'arnon_on_technology_enqueue_scripts_styles' );
 
 function disable_emojis() {
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
