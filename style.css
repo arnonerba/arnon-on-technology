@@ -83,8 +83,11 @@ blockquote, .comment {
 	font-size: inherit;
 	background-color: rgba(0,0,0,0.7);
 }
-blockquote p, .comment p {
+blockquote p {
 	margin: 0;
+}
+.comment p {
+	margin: 0 0 8px 0;
 }
 .comment cite {
 	font-weight: 700;
