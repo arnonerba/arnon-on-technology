@@ -8,17 +8,20 @@ I will review pull requests; however, I may not merge them, as this is a persona
 
 ## Supported highlight.js Languages
 The current `highlight.pack.js` bundle includes:
-- apache
-- css
-- javascript
-- bash
-- php
-- cpp
-- html
-- nginx
-- shell
 - accesslog
-- plaintext
+- apache
+- bash
+- cpp
+- css
+- html
+- javascript
 - julia-repl
+- markdown
+- nginx
+- php
+- plaintext
+- powershell
+- python
+- shell
 
-See [here](https://highlightjs.readthedocs.io/en/latest/css-classes-reference.html) for the full list of languages supported by `highlight.js`.
+See [here](https://highlightjs.org/download/) for the full list of languages supported by `highlight.js`.
