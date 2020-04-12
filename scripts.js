@@ -6,11 +6,11 @@ jQuery(document).ready(function() {
 		jQuery(document.body).toggleClass("noscroll");
 		event.stopPropagation();
 	});
-    jQuery("#scrim").click(function(event) {  
+	jQuery("#scrim").click(function(event) {
 		jQuery("#navdrawer").removeClass("navdraweropen");
 		jQuery("#scrim").removeClass("visible");
 		jQuery(document.body).removeClass("noscroll");
-    });
+	});
 	jQuery("pre").each(function(i, block) {
 		hljs.highlightBlock(block);
 	});
