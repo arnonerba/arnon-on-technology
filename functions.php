@@ -41,7 +41,7 @@ function arnon_on_technology_enqueue_scripts_styles() {
 	*/
 	wp_dequeue_style( 'wp-block-library' );
 	wp_enqueue_style( 'material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), null );
-	wp_enqueue_style( 'roboto', 'https://fonts.googleapis.com/css?family=Roboto:400,700', array(), null );
+	wp_enqueue_style( 'roboto', 'https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;700&display=swap', array(), null );
 	wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/style.css', array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
 	wp_enqueue_style( 'xt256', get_template_directory_uri() . '/xt256.css', array(), filemtime( get_template_directory() . '/xt256.css' ) );
 }
