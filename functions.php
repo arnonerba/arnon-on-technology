@@ -33,7 +33,7 @@ function arnon_on_technology_enqueue_scripts_styles() {
 	*/
 	wp_deregister_script( 'wp-embed' );
 	wp_deregister_script( 'jquery' );
-	wp_enqueue_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), '' , false, true );
+	wp_enqueue_script( 'jquery', includes_url( '/js/jquery/jquery.min.js' ), '' , false, true );
 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/scripts.min.js', array( 'jquery' ), filemtime( get_template_directory() . '/scripts.min.js' ), true );
 	wp_enqueue_script( 'highlight.js', get_template_directory_uri() . '/highlight.pack.js', '', filemtime( get_template_directory() . '/highlight.pack.js' ), true );
 	/*
