@@ -47,7 +47,7 @@ a {
 
 pre, code, textarea {
 	box-sizing: border-box;
-	font-family: monospace;
+	font-family: 'Roboto Mono', monospace;
 	font-size: inherit;
 	border-radius: 4px;
 	color: #FFF;
@@ -441,7 +441,7 @@ input[type='text'] {
 	box-sizing: border-box;
 	border: none;
 	resize: none;
-	font-family: monospace;
+	font-family: 'Roboto Mono', monospace;
 	font-size: inherit;
 	border-radius: 4px;
 	color: #FFF;
