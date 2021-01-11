@@ -2,11 +2,7 @@
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article class="card">
-			<div class="cardimage">
-				<?php if ( has_post_thumbnail() ) {
-					the_post_thumbnail();
-				} else { ?><img src="/wp-content/uploads/default_thumbnail.png" alt=""><?php } ?>
-			</div>
+			<div class="cardimage" style="background-image:url(<?php echo ( has_post_thumbnail() ) ? esc_url( get_the_post_thumbnail_url() ) : esc_url( home_url( '/wp-content/uploads/default_thumbnail.png' ) ); ?>)"></div>
 			<div class="cardtitle">
 				<h1><?php the_title(); ?></h1>
 			</div>

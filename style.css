@@ -291,23 +291,11 @@ blockquote p {
 }
 
 .cardimage {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-align-items: center;
-	align-items: center;
 	height: 169px;
 	background-color: #454545;
-	overflow: hidden;
-}
-.cardimage img {
-	-webkit-flex: none;
-	flex: none;
-	width: 800px;
-	height: auto;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
 }
 
 .cardtitle {
