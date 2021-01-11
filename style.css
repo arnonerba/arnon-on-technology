@@ -348,20 +348,20 @@ blockquote p {
 }
 .cardtext h2 {
 	display: block;
-	font-size: 20px;
+	font-size: 22px;
 	font-weight: 700;
 	margin: 0 0 16px 0;
 }
 .cardtext h3 {
 	display: inline-block;
-	font-size: 18px;
+	font-size: 20px;
 	font-style: italic;
 	margin: 0 0 16px 0;
 	border-bottom: 1px solid;
 }
 .cardtext h4 {
 	display: block;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 700;
 	margin: 0 0 16px 0;
 }
