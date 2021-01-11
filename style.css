@@ -343,12 +343,8 @@ blockquote p {
 	font-size: 14px;
 }
 .cardtext img {
-	max-width: 100%;
 	height: auto;
-}
-.cardtext img.aligncenter {
-	display: block;
-	margin: 0 auto;
+	max-width: 100%;
 }
 .cardtext h2 {
 	display: block;
