@@ -35,7 +35,7 @@
 				<h1><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h1>
 			</div>
 			<div class="cardsubtitle">
-				<span>Posted on <time datetime="<?php echo get_the_date( DATE_W3C ); ?>"><?php echo get_the_date(); ?></time> by <?php the_author_link(); ?> in <?php $categories = get_the_category(); $cat = $categories[0]; echo '<a href="'.get_category_link( $cat ).'">'.$cat->name.'</a>'; ?></span>
+				<span>Posted on <time datetime="<?php echo get_the_date( DATE_W3C ); ?>"><?php echo get_the_date(); ?></time> by <?php the_author_link(); ?> in <?php $categories = get_the_category(); $cat = $categories[0]; echo '<a href="'.get_category_link( $cat ).'">'.$cat->name.'</a>'; ?>. Last updated on <time datetime="<?php echo get_the_modified_date( DATE_W3C ); ?>"><?php echo get_the_modified_date(); ?></time>.</span>
 			</div>
 			<div class="cardtext">
 				<?php the_content(); ?>
