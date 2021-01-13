@@ -7,7 +7,17 @@
 				<h1><?php the_title(); ?></h1>
 			</div>
 			<div class="cardsubtitle">
-				<span>Posted on <time datetime="<?php echo get_the_date( DATE_W3C ); ?>"><?php echo get_the_date(); ?></time> by <?php the_author_link(); ?> in <?php $categories = get_the_category(); $cat = $categories[0]; echo '<a href="'.get_category_link( $cat ).'">'.$cat->name.'</a>'; ?>. Last updated on <time datetime="<?php echo get_the_modified_date( DATE_W3C ); ?>"><?php echo get_the_modified_date(); ?></time>.</span>
+				<?php
+				$posted_date_w3c = get_the_date( DATE_W3C );
+				$posted_date = get_the_date();
+				$modified_date_w3c = get_the_modified_date( DATE_W3C );
+				$modified_date = get_the_modified_date();
+				$categories = get_the_category();
+				$first_category = $categories[0];
+				$first_category_link = get_category_link( $first_category );
+				$first_category_name = $first_category->name
+				?>
+				<span>Posted on <time datetime="<?php echo $posted_date_w3c; ?>"><?php echo $posted_date; ?></time> by <?php the_author_link(); ?> in <a href="<?php echo $first_category_link; ?>"><?php echo $first_category_name ?></a>.<?php if ($modified_date_w3c > $posted_date_w3c) { ?> Last updated on <time datetime="<?php echo $modified_date_w3c; ?>"><?php echo $modified_date; ?></time>.<?php } ?></span>
 			</div>
 			<div class="cardtext full">
 				<?php the_content(); ?>
