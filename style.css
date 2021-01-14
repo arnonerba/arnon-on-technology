@@ -316,6 +316,16 @@ blockquote p {
 	font-weight: 700;
 }
 
+.modified-date {
+	margin: 0 2px 0 0;
+	padding: 2px 6px;
+	border-radius: 4px;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #212121;
+	background-color: #FFF;
+}
+
 .cardtext {
 	position: relative;
 	max-height: 255px;

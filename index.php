@@ -45,7 +45,8 @@
 				$first_category_link = get_category_link( $first_category );
 				$first_category_name = $first_category->name
 				?>
-				<span>Posted on <time datetime="<?php echo $posted_date_w3c; ?>"><?php echo $posted_date; ?></time> by <?php the_author_link(); ?> in <a href="<?php echo $first_category_link; ?>"><?php echo $first_category_name ?></a>.<?php if ($modified_date_w3c > $posted_date_w3c) { ?> Last updated on <time datetime="<?php echo $modified_date_w3c; ?>"><?php echo $modified_date; ?></time>.<?php } ?></span>
+				<?php if ($modified_date_w3c > $posted_date_w3c) { ?><span class="modified-date">Updated <time datetime="<?php echo $modified_date_w3c; ?>"><?php echo $modified_date; ?></time></span><?php } ?>
+				<span>Posted by <?php the_author_link(); ?> in <a href="<?php echo $first_category_link; ?>"><?php echo $first_category_name ?></a> on <time datetime="<?php echo $posted_date_w3c; ?>"><?php echo $posted_date; ?></time>.</span>
 			</div>
 			<div class="cardtext">
 				<?php the_content(); ?>
