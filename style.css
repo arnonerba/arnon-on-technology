@@ -277,8 +277,8 @@ blockquote p {
 
 .headertext {
 	margin-left: auto;
-	text-transform: uppercase;
 	font-size: 14px;
+	text-transform: uppercase;
 }
 
 .card {
