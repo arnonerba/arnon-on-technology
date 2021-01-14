@@ -299,7 +299,7 @@ blockquote p {
 }
 
 .cardtitle {
-	margin: 18px 16px 12px 16px;
+	margin: 18px 16px 8px 16px;
 	font-size: 24px;
 }
 .cardtitle a {
@@ -310,7 +310,7 @@ blockquote p {
 }
 
 .cardsubtitle {
-	margin: 12px 16px 16px 16px;
+	margin: 8px 16px 16px 16px;
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 700;
