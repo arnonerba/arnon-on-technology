@@ -58,7 +58,7 @@ pre, code, textarea {
 pre {
 	display: block;
 	white-space: pre;
-	margin: 16px 0;
+	margin: 0 0 16px 0;
 	padding: 8px !important;
 	overflow: auto;
 }
@@ -69,7 +69,7 @@ code {
 textarea {
 	display: block;
 	white-space: pre-wrap;
-	margin: 16px 0;
+	margin: 0 0 16px 0;
 	padding: 8px;
 	width: 100%;
 	resize: none;
@@ -436,7 +436,7 @@ input[type='search']:focus {
 input[type='text'] {
 	display: block;
 	white-space: pre-wrap;
-	margin: 16px 0;
+	margin: 0;
 	padding: 8px;
 	width: 100%;
 	box-sizing: border-box;
@@ -538,7 +538,7 @@ input[type='text'] {
 }
 
 ol.commentlist {
-	margin: 16px 0;
+	margin: 0 0 16px 0;
 	padding: 0;
 	list-style-type: none;
 }
