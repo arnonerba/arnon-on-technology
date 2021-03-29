@@ -37,15 +37,17 @@
 			<div class="cardsubtitle">
 				<?php
 				$posted_date_w3c = get_the_date( DATE_W3C );
+				$posted_date_ymd = get_the_date( 'Y-m-d' );
 				$posted_date = get_the_date();
 				$modified_date_w3c = get_the_modified_date( DATE_W3C );
+				$modified_date_ymd = get_the_modified_date( 'Y-m-d' );
 				$modified_date = get_the_modified_date();
 				$categories = get_the_category();
 				$first_category = $categories[0];
 				$first_category_link = get_category_link( $first_category );
 				$first_category_name = $first_category->name
 				?>
-				<?php if ($modified_date_w3c > $posted_date_w3c) { ?><span class="modified-date">Updated <time datetime="<?php echo $modified_date_w3c; ?>"><?php echo $modified_date; ?></time></span><?php } ?>
+				<?php if ($modified_date_ymd > $posted_date_ymd) { ?><span class="modified-date">Updated <time datetime="<?php echo $modified_date_w3c; ?>"><?php echo $modified_date; ?></time></span><?php } ?>
 				<span>Posted by <?php the_author_link(); ?> in <a href="<?php echo $first_category_link; ?>"><?php echo $first_category_name ?></a> on <time datetime="<?php echo $posted_date_w3c; ?>"><?php echo $posted_date; ?></time>.</span>
 			</div>
 			<div class="cardtext">
