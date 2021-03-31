@@ -588,15 +588,6 @@ ul.children {
 	color: rgba(0,0,0,0.4);
 }
 
-::selection {
-	background: #B3D4FC;
-	text-shadow: none;
-}
-::-moz-selection {
-	background: #B3D4FC;
-	text-shadow: none;
-}
-
 @media screen and (max-width: 768px) {
 	#header {
 		position: static;
