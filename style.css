@@ -14,7 +14,7 @@ body {
 	font-weight: 400;
 	color: rgba(255,255,255,0.87);
 	background-color: #212121;
-	-webkit-text-size-adjust: 100%;
+	text-size-adjust: none;
 }
 body.noscroll {
 	position: absolute;
@@ -98,9 +98,6 @@ blockquote p {
 	padding: 12px;
 	cursor: pointer;
 	color: #000;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 	user-select: none;
 }
 #navmenubutton {
@@ -135,8 +132,6 @@ blockquote p {
 }
 #navdrawer.navdraweropen {
 	visibility: visible;
-	-webkit-transform: translate(256px,0);
-	-ms-transform: translate(256px,0);
 	transform: translate(256px,0);
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
@@ -150,11 +145,7 @@ blockquote p {
 }
 #navdrawer ul li {
 	position: relative;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-align-items: center;
 	align-items: center;
 	height: 38px;
 	margin: 6px;
@@ -240,11 +231,7 @@ blockquote p {
 	z-index: 5;
 	left: 0;
 	right: 0;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-align-items: center;
 	align-items: center;
 	height: 48px;
 	color: #000;
@@ -391,13 +378,8 @@ blockquote p {
 }
 
 #footer {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-align-items: center;
 	align-items: center;
-	-webkit-justify-content: center;
 	justify-content: center;
 	background-color: #121212;
 	height: 64px;
@@ -429,7 +411,7 @@ input[type='search'] {
 	color: #000;
 	outline: none;
 	border-radius: 0;
-	-webkit-appearance: none;
+	appearance: none;
 }
 input[type='search']:focus {
 	border-bottom: 2px solid #000;
@@ -450,17 +432,13 @@ input[type='text'] {
 	border-radius: 4px;
 	color: inherit;
 	background-color: rgba(0,0,0,0.87) !important;
-	-webkit-appearance: none;
+	appearance: none;
 }
 
 .button, #page_navigation a, input[type='submit'] {
 	position: relative;
-	display: -webkit-inline-box;
-	display: -ms-inline-flexbox;
 	display: inline-flex;
-	-webkit-align-items: center;
 	align-items: center;
-	-webkit-justify-content: center;
 	justify-content: center;
 	background: 0 0;
 	border: 1px solid #76FF03;
@@ -480,7 +458,7 @@ input[type='text'] {
 	vertical-align: middle;
 	color: #76FF03;
 	transition: background-color 150ms ease, box-shadow 150ms ease;
-	-webkit-appearance: none;
+	appearance: none;
 }
 .button:hover, input[type='submit']:hover {
 	background-color: rgba(158,158,158,0.2);
@@ -520,22 +498,15 @@ input[type='text'] {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	-webkit-transform: translate(-12px,-12px);
 	transform: translate(-12px,-12px);
 	line-height: 24px;
 	width: 24px;
 }
 
 #searchform {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-flex-flow: row nowrap;
 	flex-flow: row nowrap;
-	-webkit-justify-content: space-between;
 	justify-content: space-between;
-	-webkit-align-items: center;
 	align-items: center;
 	margin: 16px;
 }
@@ -583,23 +554,10 @@ ul.children {
 	opacity: 1;
 	color: rgba(0,0,0,0.4);
 }
-::-webkit-input-placeholder {
-	opacity: 1;
-	color: rgba(0,0,0,0.4);
-}
-::-moz-placeholder {
-	opacity: 1;
-	color: rgba(0,0,0,0.4);
-}
-:-ms-input-placeholder {
-	opacity: 1;
-	color: rgba(0,0,0,0.4);
-}
 
 @media screen and (max-width: 768px) {
 	#header {
 		position: static;
-		-webkit-flex-direction: column;
 		flex-direction: column;
 		height: auto;
 		padding: 10px;
