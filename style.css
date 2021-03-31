@@ -13,7 +13,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	color: rgba(255,255,255,0.87);
-	background-color: #616161;
+	background-color: #212121;
 	-webkit-text-size-adjust: 100%;
 }
 body.noscroll {
@@ -198,7 +198,7 @@ blockquote p {
 	display: block;
 	height: 1px;
 	border: 0;
-	border-top: 1px solid rgba(0,0,0,0.12);
+	border-top: 1px solid rgba(0,0,0,0.2);
 	margin: 8px 0;
 	padding: 0;
 }
@@ -284,9 +284,10 @@ blockquote p {
 .card {
 	text-align: left;
 	margin: 20px 10px 0 10px;
-	background-color: #212121;
-	border-radius: 4px;
+	background-color: #121212;
+	border-radius: 8px;
 	overflow: hidden;
+	border: 1px solid rgba(255,255,255,0.2);
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.2),0 1px 5px 0 rgba(0,0,0,0.12);
 }
 
@@ -322,7 +323,7 @@ blockquote p {
 	border-radius: 4px;
 	font-size: 14px;
 	text-transform: uppercase;
-	color: #212121;
+	color: #121212;
 	background-color: rgba(255,255,255,0.87);
 }
 
@@ -330,22 +331,23 @@ blockquote p {
 	position: relative;
 	max-height: 255px;
 	overflow: hidden;
-	margin: 16px;
+	margin: 16px 16px 0 16px;
 	font-size: 16px;
 	line-height: 24px;
 }
 .cardtext::after {
 	content: '';
-	height: 24px;
+	height: 48px;
 	position: absolute;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: linear-gradient(rgba(33,33,33,0), rgba(33,33,33,1));
+	background: linear-gradient(rgba(18,18,18,0), rgba(18,18,18,1));
 }
 .cardtext.full {
 	max-height: none;
 	overflow: visible;
+	margin-bottom: 16px;
 }
 .cardtext.full:after {
 	display: none;
@@ -380,7 +382,7 @@ blockquote p {
 
 .cardactions {
 	padding: 16px;
-	border-top: 1px solid rgba(255,255,255,0.12);
+	border-top: 1px solid rgba(255,255,255,0.2);
 }
 
 .cardtags {
@@ -397,7 +399,7 @@ blockquote p {
 	align-items: center;
 	-webkit-justify-content: center;
 	justify-content: center;
-	background-color: #212121;
+	background-color: #121212;
 	height: 64px;
 	width: 100%;
 	box-sizing: border-box;
@@ -405,6 +407,7 @@ blockquote p {
 	position: absolute;
 	bottom: 0;
 	left: 0;
+	border-top: 1px solid rgba(255,255,255,0.2);
 }
 
 .footertext {
@@ -414,7 +417,7 @@ blockquote p {
 
 input[type='search'] {
 	border: none;
-	border-bottom: 1px solid rgba(0,0,0,0.12);
+	border-bottom: 1px solid rgba(0,0,0,0.2);
 	display: block;
 	font-family: 'Roboto', sans-serif;
 	font-size: inherit;
@@ -501,15 +504,15 @@ input[type='text'] {
 }
 .button.raised, #page_navigation a {
 	margin: 4px;
-	background-color: #212121;
+	background-color: #121212;
 	box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
 }
 .button.raised:hover, #page_navigation a:hover {
-	background-color: #212121;
+	background-color: #121212;
 	box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
 }
 .button.raised:active, #page_navigation a:active {
-	background-color: #212121;
+	background-color: #121212;
 	box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
 }
 .button .material-icons {
@@ -554,11 +557,11 @@ ul.children {
 }
 .comment-form textarea, .comment-form input[type='text'] {
 	margin: 4px 0;
+	border: 1px solid rgba(255,255,255,0.2);
 }
 
 .error {
 	margin: 96px 0;
-	color: #212121;
 	text-align: center;
 }
 .error span {
