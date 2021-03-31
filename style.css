@@ -242,9 +242,9 @@ blockquote p {
 }
 
 .container {
-	max-width: 820px;
+	max-width: 840px;
 	margin: auto;
-	padding: 48px 10px 64px 10px;
+	padding: 48px 0 64px 0;
 }
 
 #header {
@@ -302,7 +302,7 @@ blockquote p {
 
 .card {
 	text-align: left;
-	margin: 20px 10px;
+	margin: 20px;
 	background-color: #121212;
 	border-radius: 8px;
 	overflow: hidden;
@@ -586,7 +586,7 @@ input[type='text'] {
 }
 
 #page_navigation {
-	margin: 20px 10px;
+	margin: 20px;
 	text-align: center;
 }
 
@@ -683,7 +683,7 @@ ul.children {
 		padding: 0 0 64px 0;
 	}
 	.card {
-		margin: 12px 10px;
+		margin: 10px;
 	}
 	.error span {
 		font-size: 72px;
@@ -692,6 +692,6 @@ ul.children {
 		height: 130px;
 	}
 	#page_navigation {
-		margin: 12px 10px;
+		margin: 10px;
 	}
 }
