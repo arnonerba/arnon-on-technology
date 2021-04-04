@@ -590,12 +590,12 @@ input[type='text'] {
 	text-align: center;
 }
 
-ol.commentlist {
+ol.comment-list {
 	margin: 0 0 16px 0;
 	padding: 0;
 	list-style-type: none;
 }
-ul.children {
+ol.children {
 	margin: 16px 8px;
 	padding: 0;
 	list-style-type: none;
