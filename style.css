@@ -98,6 +98,10 @@ blockquote p {
 	font-weight: 700;
 }
 
+li pre, li blockquote {
+	margin: 8px 0;
+}
+
 #navmenubutton, #menubutton {
 	padding: 12px;
 	cursor: pointer;
